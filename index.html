@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="title">
+            <h1>ROCK</h1>
+            <h1>PAPER</h1>
+            <h1>SCISSORS</h1>
+        </div>
+        <div class="result">
+            <div class="pc-score">
+                <span>Computer score</span>
+                <h1 id="computer-score">0</h1>
+            </div>
+            <div class="my-score">
+                <span>your score</span>
+                <h1 id="my-score">0</h1>
+            </div>
+        </div>
+    </header>
+    <section class="rock-container">
+        <div class="rock">
+            <img src="./images/rock.png" alt="rock">
+        </div>
+        <span class="line1"></span>
+        <div class="scissors">
+            <img src="./images/scissors.png" alt="scissors">
+        </div>
+    </section>
+    <section class="paper-container">
+        <span class="line2"></span>
+        <div class="paper">
+            <img src="./images/paper.png" alt="paper">
+        </div>
+        <span class="line3"></span>
+    </section>
+    <section class="win-container">
+        <div class="left">
+            <span>You Picked</span>
+            <div class="scissors">
+                <img src="./images/scissors.png" alt="scissors">
+            </div>
+        </div>
+        <div class="middle">
+            <!-- <h1>YOU WIN</h1> -->
+            <h1>YOU LOST</h1>
+            <h3>AGAINST PC</h3>
+            <button class="play-again" id="play-again">Play Again</button>
+        </div>
+        <div class="right">
+            <span>Pc Picked</span>
+            <div class="paper">
+                <img src="./images/paper.png" alt="paper">
+            </div>
+        </div>
+    </section>
+    <section class="tie-container">
+        <div class="tie-left">
+            <span>You Picked</span>
+            <div class="rock">
+                <img src="./images/rock.png" alt="rock">
+            </div>
+        </div>
+        <div class="tie-middle">
+            <h1>TIE UP</h1>
+            <button class="play-again" id="play-again">Play Again</button>
+        </div>
+        <div class="tie-right">
+            <span>Pc Picked</span>
+            <div class="rock">
+                <img src="./images/rock.png" alt="rock">
+            </div>
+        </div>
+    </section>
+    <section class="cup-container">
+        <div class="image">
+            <img src="./images/cup.png" alt="cup">
+        </div>
+        <h1>HURRAY!!</h1>
+        <h2>YOU WON THE GAME</h2>
+        <button class="play-again" id="play-again">Play Again</button>
+    </section>
+    <section class="game_rules">
+        <span class="close" id="close">X</span>
+        <h1>Game Rules</h1>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+    </section>
+    <button class="next" id="nextBtn">Next</button>
+    <button class="rules" id="rulesBtn">Rules</button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
