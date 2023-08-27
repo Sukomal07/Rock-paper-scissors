@@ -81,6 +81,7 @@ function onClick(event) {
     const div = document.getElementsByTagName("div")
     if (winner === 'user') {
         userScore++;
+        rulesBtn.style.right = '8%'
         nextBtn.style.display = 'block';
         myScore.textContent = userScore;
         rockContainer.style.display = 'none';
@@ -132,6 +133,7 @@ choices.forEach(choice => {
 });
 
 playAgainBtn.addEventListener('click', function () {
+    rulesBtn.style.right = '2%'
     nextBtn.style.display = 'none';
     winContainer.style.display = 'none';
     paperContainer.style.display = 'flex'
@@ -139,6 +141,7 @@ playAgainBtn.addEventListener('click', function () {
     rockContainer.style.display = 'flex'
 });
 rePlayBtn.addEventListener('click', function () {
+    rulesBtn.style.right = '2%'
     nextBtn.style.display = 'none';
     scoreContainer.style.display = 'flex'
     winContainer.style.display = 'none';
