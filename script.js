@@ -76,8 +76,6 @@ function onClick(event) {
     const computerChoice = getComputerChoice();
     winner = getWinner(userChoice, computerChoice);
 
-    console.log(userChoice);
-    console.log(computerChoice);
     userPicked.classList.remove('circle1')
     pcPicked.classList.remove('circle1')
     const div = document.getElementsByTagName("div")
