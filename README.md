@@ -15,7 +15,7 @@ This is a simple web-based implementation of the classic game "Rock, Paper, Scis
 
 ## Demo
 
-[https://sukomal07.github.io/Rock-paper-scissors]
+[Live Link](https://sukomal07.github.io/Rock-paper-scissors)
 
 ## Features
 
