@@ -154,8 +154,7 @@ img {
   align-items: center;
   gap: 20px;
 }
-.left::before {
-  display: none;
+.circle1::before {
   position: absolute;
   width: 168px;
   height: 168px;
@@ -163,7 +162,15 @@ img {
   border: 20px solid #1da82ba3;
   border-radius: 50%;
   top: -2%;
-  /* display: flex; */
+}
+.circle2::before {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  content: "";
+  border: 28px solid #1da82b;
+  border-radius: 50%;
+  top: 10%;
 }
 .middle {
   display: flex;
@@ -181,16 +188,7 @@ img {
   cursor: pointer;
   font-weight: 600;
 }
-.right::before {
-  position: absolute;
-  width: 168px;
-  height: 168px;
-  content: "";
-  border: 20px solid #1da82ba3;
-  border-radius: 50%;
-  top: -2%;
-  display: flex;
-}
+
 .left > span {
   z-index: 1;
 }
@@ -224,26 +222,7 @@ img {
   align-items: center;
   margin-top: 3rem;
 }
-.scissors::before {
-  display: none;
-  position: absolute;
-  width: 115px;
-  height: 115px;
-  content: "";
-  border: 28px solid #1da82b;
-  border-radius: 50%;
-  top: 10%;
-}
-.paper::before {
-  display: none;
-  position: absolute;
-  width: 115px;
-  height: 115px;
-  content: "";
-  border: 28px solid #1da82b;
-  border-radius: 50%;
-  top: 10%;
-}
+
 .cup-container {
   display: none;
   position: relative;
@@ -327,7 +306,7 @@ img {
 .rules {
   position: absolute;
   top: 80%;
-  right: 5%;
+  right: 10%;
   margin-right: 20px;
   padding: 5px 10px;
   border: 2px solid white;
@@ -341,8 +320,8 @@ img {
 .next {
   display: none;
   position: absolute;
-  top: 90%;
-  right: 2%;
+  top: 80%;
+  right: 0%;
   margin-right: 50px;
   padding: 5px 10px;
   border: 2px solid white;
