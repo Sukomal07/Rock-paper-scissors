@@ -24,6 +24,7 @@ rulesBtn.addEventListener('click', function () {
 });
 
 nextBtn.addEventListener('click', function () {
+    rulesBtn.style.right = '2%'
     scoreContainer.style.display = 'none';
     rockContainer.style.display = 'none';
     paperContainer.style.display = 'none';
@@ -90,7 +91,7 @@ function onClick(event) {
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Win');
         userPicked.classList.add('circle1');
-        div[8].classList.add('circle2')
+        div[9].classList.add('circle2')
     } else if (winner === 'computer') {
         computerScore++;
         pcScore.textContent = computerScore;
@@ -100,7 +101,7 @@ function onClick(event) {
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Lost');
         pcPicked.classList.add('circle1');
-        div[11].classList.add('circle2')
+        div[12].classList.add('circle2')
     } else if (winner === 'tie') {
         rockContainer.style.display = 'none';
         paperContainer.style.display = 'none';
