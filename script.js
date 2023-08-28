@@ -5,8 +5,7 @@ const nextBtn = document.getElementById('nextBtn');
 const choices = document.querySelectorAll('.choice');
 const winContainer = document.querySelector('.win-container');
 const scoreContainer = document.querySelector('.score-container');
-const rockContainer = document.querySelector('.rock-container');
-const paperContainer = document.querySelector('.paper-container');
+const diagram = document.querySelector('.diagram');
 const cupContainer = document.querySelector('.cup-container');
 const userPicked = document.querySelector('.left');
 const pcPicked = document.querySelector('.right');
@@ -26,8 +25,7 @@ rulesBtn.addEventListener('click', function () {
 nextBtn.addEventListener('click', function () {
     rulesBtn.style.right = '2%'
     scoreContainer.style.display = 'none';
-    rockContainer.style.display = 'none';
-    paperContainer.style.display = 'none';
+    diagram.style.display = 'none';
     winContainer.style.display = 'none';
     cupContainer.style.display = 'flex';
     nextBtn.style.display = 'none'
@@ -85,26 +83,23 @@ function onClick(event) {
         rulesBtn.style.right = '8%'
         nextBtn.style.display = 'block';
         myScore.textContent = userScore;
-        rockContainer.style.display = 'none';
-        paperContainer.style.display = 'none';
+        diagram.style.display = 'none';
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Win');
         userPicked.classList.add('circle1');
-        div[9].classList.add('circle2')
+        div[11].classList.add('circle2')
     } else if (winner === 'computer') {
         computerScore++;
         pcScore.textContent = computerScore;
-        rockContainer.style.display = 'none';
-        paperContainer.style.display = 'none';
+        diagram.style.display = 'none';
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Lost');
         pcPicked.classList.add('circle1');
-        div[12].classList.add('circle2')
+        div[14].classList.add('circle2')
     } else if (winner === 'tie') {
-        rockContainer.style.display = 'none';
-        paperContainer.style.display = 'none';
+        diagram.style.display = 'none';
         winContainer.style.display = 'flex';
         cupContainer.style.display = 'none';
         displayResult(userChoice, computerChoice, 'Tie Up');
@@ -137,16 +132,14 @@ playAgainBtn.addEventListener('click', function () {
     rulesBtn.style.right = '2%'
     nextBtn.style.display = 'none';
     winContainer.style.display = 'none';
-    paperContainer.style.display = 'flex'
     cupContainer.style.display = 'none'
-    rockContainer.style.display = 'flex'
+    diagram.style.display = 'flex'
 });
 rePlayBtn.addEventListener('click', function () {
     rulesBtn.style.right = '2%'
     nextBtn.style.display = 'none';
     scoreContainer.style.display = 'flex'
     winContainer.style.display = 'none';
-    paperContainer.style.display = 'flex'
     cupContainer.style.display = 'none'
-    rockContainer.style.display = 'flex'
+    diagram.style.display = 'flex'
 })
