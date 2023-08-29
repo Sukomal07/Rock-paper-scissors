@@ -155,12 +155,6 @@ img {
   font-family: "Roboto", sans-serif;
   color: white;
 }
-.left {
-  position: relative;
-}
-.right {
-  position: relative;
-}
 .left,
 .right {
   display: flex;
@@ -168,24 +162,7 @@ img {
   align-items: center;
   gap: 23px;
 }
-.circle1::before {
-  position: absolute;
-  width: 168px;
-  height: 168px;
-  content: "";
-  border: 20px solid #1da82ba3;
-  border-radius: 50%;
-  top: -2%;
-}
-.circle2::before {
-  position: absolute;
-  width: 115px;
-  height: 115px;
-  content: "";
-  border: 28px solid #1da82b;
-  border-radius: 50%;
-  top: 10%;
-}
+
 .middle {
   display: flex;
   flex-direction: column;
@@ -202,38 +179,13 @@ img {
   cursor: pointer;
   font-weight: 600;
 }
-
-.left > span {
-  z-index: 1;
-}
+.left > span,
 .right > span {
-  z-index: 1;
+  z-index: 1000;
 }
+
 .middle > h1 {
   font-size: 33px;
-}
-.tie-container {
-  display: none;
-  margin-top: 5rem;
-  align-items: center;
-  justify-content: center;
-  gap: 8rem;
-  font-family: "Roboto", sans-serif;
-  color: white;
-}
-.tie-left,
-.tie-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.tie-middle {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-  margin-top: 3rem;
 }
 
 .cup-container {
@@ -293,7 +245,6 @@ img {
 }
 .game_rules > ul > li::marker {
   color: #ffd600;
-  /* font-size: 20px; */
 }
 
 .close {
@@ -343,4 +294,8 @@ img {
   color: white;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.win {
+  box-shadow: 0 0 0 30px #1da82b, 0 0 0 50px #1da82ba3;
 }

@@ -9,11 +9,11 @@ const diagram = document.querySelector('.diagram');
 const cupContainer = document.querySelector('.cup-container');
 const userPicked = document.querySelector('.left');
 const pcPicked = document.querySelector('.right');
-const playAgainBtn = document.getElementById('play-again')
-const rePlayBtn = document.getElementById('rePlay')
-const message = document.getElementById('message')
+const playAgainBtn = document.getElementById('play-again');
+const rePlayBtn = document.getElementById('rePlay');
+const message = document.getElementById('message');
 const pcScore = document.getElementById('computer-score')
-const myScore = document.getElementById('my-score')
+const myScore = document.getElementById('my-score');
 closeBtn.addEventListener('click', () => {
     rulesContainer.style.display = 'none';
 });
@@ -23,12 +23,12 @@ rulesBtn.addEventListener('click', function () {
 });
 
 nextBtn.addEventListener('click', function () {
-    rulesBtn.style.right = '2%'
+    rulesBtn.style.right = '2%';
     scoreContainer.style.display = 'none';
     diagram.style.display = 'none';
     winContainer.style.display = 'none';
     cupContainer.style.display = 'flex';
-    nextBtn.style.display = 'none'
+    nextBtn.style.display = 'none';
 });
 
 let computerScore = 0;
@@ -67,7 +67,7 @@ function displayResult(player, computer, resultMessage) {
             <img src="./images/${computer}.png" alt="${computer}">
         </div>
     `;
-    message.textContent = resultMessage
+    message.textContent = resultMessage;
 }
 
 function onClick(event) {
@@ -75,8 +75,6 @@ function onClick(event) {
     const computerChoice = getComputerChoice();
     winner = getWinner(userChoice, computerChoice);
 
-    userPicked.classList.remove('circle1')
-    pcPicked.classList.remove('circle1')
     const div = document.getElementsByTagName("div")
     if (winner === 'user') {
         userScore++;
@@ -87,8 +85,7 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Win');
-        userPicked.classList.add('circle1');
-        div[11].classList.add('circle2')
+        div[11].classList.add('win');
     } else if (winner === 'computer') {
         computerScore++;
         pcScore.textContent = computerScore;
@@ -96,8 +93,7 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Lost');
-        pcPicked.classList.add('circle1');
-        div[14].classList.add('circle2')
+        div[14].classList.add('win');
     } else if (winner === 'tie') {
         diagram.style.display = 'none';
         winContainer.style.display = 'flex';
@@ -129,17 +125,17 @@ choices.forEach(choice => {
 });
 
 playAgainBtn.addEventListener('click', function () {
-    rulesBtn.style.right = '2%'
+    rulesBtn.style.right = '2%';
     nextBtn.style.display = 'none';
     winContainer.style.display = 'none';
-    cupContainer.style.display = 'none'
-    diagram.style.display = 'flex'
+    cupContainer.style.display = 'none';
+    diagram.style.display = 'flex';
 });
 rePlayBtn.addEventListener('click', function () {
-    rulesBtn.style.right = '2%'
+    rulesBtn.style.right = '2%';
     nextBtn.style.display = 'none';
-    scoreContainer.style.display = 'flex'
+    scoreContainer.style.display = 'flex';
     winContainer.style.display = 'none';
-    cupContainer.style.display = 'none'
-    diagram.style.display = 'flex'
+    cupContainer.style.display = 'none';
+    diagram.style.display = 'flex';
 })
