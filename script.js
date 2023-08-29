@@ -9,11 +9,11 @@ const diagram = document.querySelector('.diagram');
 const cupContainer = document.querySelector('.cup-container');
 const userPicked = document.querySelector('.left');
 const pcPicked = document.querySelector('.right');
-const playAgainBtn = document.getElementById('play-again');
-const rePlayBtn = document.getElementById('rePlay');
-const message = document.getElementById('message');
+const playAgainBtn = document.getElementById('play-again')
+const rePlayBtn = document.getElementById('rePlay')
+const message = document.getElementById('message')
 const pcScore = document.getElementById('computer-score')
-const myScore = document.getElementById('my-score');
+const myScore = document.getElementById('my-score')
 closeBtn.addEventListener('click', () => {
     rulesContainer.style.display = 'none';
 });
@@ -75,17 +75,20 @@ function onClick(event) {
     const computerChoice = getComputerChoice();
     winner = getWinner(userChoice, computerChoice);
 
+    userPicked.classList.remove('circle1')
+    pcPicked.classList.remove('circle1')
     const div = document.getElementsByTagName("div")
     if (winner === 'user') {
         userScore++;
-        rulesBtn.style.right = '8%'
+        rulesBtn.style.right = '8%';
         nextBtn.style.display = 'block';
         myScore.textContent = userScore;
         diagram.style.display = 'none';
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Win');
-        div[11].classList.add('win');
+        userPicked.classList.add('circle1');
+        div[11].classList.add('circle2')
     } else if (winner === 'computer') {
         computerScore++;
         pcScore.textContent = computerScore;
@@ -93,7 +96,8 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Lost');
-        div[14].classList.add('win');
+        pcPicked.classList.add('circle1');
+        div[14].classList.add('circle2')
     } else if (winner === 'tie') {
         diagram.style.display = 'none';
         winContainer.style.display = 'flex';
@@ -136,6 +140,6 @@ rePlayBtn.addEventListener('click', function () {
     nextBtn.style.display = 'none';
     scoreContainer.style.display = 'flex';
     winContainer.style.display = 'none';
-    cupContainer.style.display = 'none';
-    diagram.style.display = 'flex';
+    cupContainer.style.display = 'none'
+    diagram.style.display = 'flex'
 })
