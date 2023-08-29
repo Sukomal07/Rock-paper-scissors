@@ -75,8 +75,6 @@ function onClick(event) {
     const computerChoice = getComputerChoice();
     winner = getWinner(userChoice, computerChoice);
 
-    userPicked.classList.remove('circle1')
-    pcPicked.classList.remove('circle1')
     const div = document.getElementsByTagName("div")
     if (winner === 'user') {
         userScore++;
@@ -87,8 +85,7 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Win');
-        userPicked.classList.add('circle1');
-        div[11].classList.add('circle2')
+        div[11].classList.add('win')
     } else if (winner === 'computer') {
         computerScore++;
         pcScore.textContent = computerScore;
@@ -96,8 +93,7 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Lost');
-        pcPicked.classList.add('circle1');
-        div[14].classList.add('circle2')
+        div[14].classList.add('win')
     } else if (winner === 'tie') {
         diagram.style.display = 'none';
         winContainer.style.display = 'flex';
