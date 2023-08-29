@@ -9,11 +9,11 @@ const diagram = document.querySelector('.diagram');
 const cupContainer = document.querySelector('.cup-container');
 const userPicked = document.querySelector('.left');
 const pcPicked = document.querySelector('.right');
-const playAgainBtn = document.getElementById('play-again')
-const rePlayBtn = document.getElementById('rePlay')
-const message = document.getElementById('message')
-const pcScore = document.getElementById('computer-score')
-const myScore = document.getElementById('my-score')
+const playAgainBtn = document.getElementById('play-again');
+const rePlayBtn = document.getElementById('rePlay');
+const message = document.getElementById('message');
+const pcScore = document.getElementById('computer-score');
+const myScore = document.getElementById('my-score');
 closeBtn.addEventListener('click', () => {
     rulesContainer.style.display = 'none';
 });
@@ -75,7 +75,7 @@ function onClick(event) {
     const computerChoice = getComputerChoice();
     winner = getWinner(userChoice, computerChoice);
 
-    const div = document.getElementsByTagName("div")
+    const div = document.getElementsByTagName("div");
     if (winner === 'user') {
         userScore++;
         rulesBtn.style.right = '8%';
@@ -85,7 +85,7 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Win');
-        div[11].classList.add('win')
+        div[11].classList.add('win');
     } else if (winner === 'computer') {
         computerScore++;
         pcScore.textContent = computerScore;
@@ -93,7 +93,7 @@ function onClick(event) {
         cupContainer.style.display = 'none';
         winContainer.style.display = 'flex';
         displayResult(userChoice, computerChoice, 'You Lost');
-        div[14].classList.add('win')
+        div[14].classList.add('win');
     } else if (winner === 'tie') {
         diagram.style.display = 'none';
         winContainer.style.display = 'flex';
@@ -137,5 +137,5 @@ rePlayBtn.addEventListener('click', function () {
     scoreContainer.style.display = 'flex';
     winContainer.style.display = 'none';
     cupContainer.style.display = 'none'
-    diagram.style.display = 'flex'
-})
+    diagram.style.display = 'flex';
+});
